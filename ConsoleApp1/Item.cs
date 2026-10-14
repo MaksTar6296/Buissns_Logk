@@ -35,6 +35,7 @@ namespace ConsoleApp1
 
         public void Use()
         {
+            //Сюди додайте логіку айтема
             Console.WriteLine("Використано предмет");
         }
         public int GetId()
