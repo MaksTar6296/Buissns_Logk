@@ -33,12 +33,10 @@ namespace ConsoleApp1
             this.isConsumable = isConsumable;
         }
 
-        public virtual bool Use(Player player)
+        public void Use()
         {
-            return false;
+            Console.WriteLine("Використано предмет");
         }
-
-
         public int GetId()
         {
             return id;
