@@ -13,8 +13,13 @@ namespace ConsoleApp1
         private int price;
 
         private static int nextId = 1;
+        private bool isConsumable;
+        public bool IsConsumable
+        {
+            get { return isConsumable; }
+        }
 
-        public Item(string name, int price)
+        public Item(string name, int price, bool isConsumable)
         {
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("Назва не може бути порожньою");
@@ -25,7 +30,14 @@ namespace ConsoleApp1
             id = nextId++;
             this.name = name;
             this.price = price;
+            this.isConsumable = isConsumable;
         }
+
+        public virtual bool Use(Player player)
+        {
+            return false;
+        }
+
 
         public int GetId()
         {
